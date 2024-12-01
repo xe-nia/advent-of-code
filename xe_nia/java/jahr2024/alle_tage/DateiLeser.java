@@ -19,7 +19,7 @@ public class DateiLeser {
 	private void liesDatei(String datei) throws IOException
 	{
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(datei));
-		wandleSpaltenZuZweiListen(bufferedReader, "\t");
+		wandleSpaltenZuZweiListen(bufferedReader, "   ");
 	}
 
 	public void wandleSpaltenZuZweiListen(BufferedReader bufferedReader, String trenner) throws IOException
