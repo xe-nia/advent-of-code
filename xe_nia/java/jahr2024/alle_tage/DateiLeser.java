@@ -2,10 +2,8 @@ package jahr2024.alle_tage;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class DateiLeser {
 
@@ -38,12 +36,12 @@ public class DateiLeser {
 		}
 	}
 
-	public List<Integer> getErsteSpalte(ArrayList<String> ersteSpalte)
+	public List<Integer> getErsteSpalte()
 	{
 		return getSpalte(ersteSpalte);
 	}
 
-	public List<Integer> getZweiteSpalte(ArrayList<String> zweiteSpalte)
+	public List<Integer> getZweiteSpalte()
 	{
 		return getSpalte(zweiteSpalte);
 	}
@@ -53,12 +51,12 @@ public class DateiLeser {
 		return spalte.stream().map(Integer::parseInt).collect(Collectors.toList());
 	}
 
-	public List<Integer> getErsteSpalteSortiert(ArrayList<String> ersteSpalte)
+	public List<Integer> getErsteSpalteSortiert()
 	{
 		return getSpalteSortiert(ersteSpalte);
 	}
 
-	public List<Integer> getZweiteSpalteSortiert(ArrayList<String> zweiteSpalte)
+	public List<Integer> getZweiteSpalteSortiert()
 	{
 		return getSpalteSortiert(zweiteSpalte);
 	}
