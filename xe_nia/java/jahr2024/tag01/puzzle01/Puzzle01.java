@@ -11,12 +11,12 @@ public class Puzzle01
 	private final List<Integer> zweiteSpalteSortiert;
 	public Puzzle01(String pfad) throws IOException
 	{
-		DateiLeser input = new DateiLeser("");
+		DateiLeser input = new DateiLeser(pfad);
 		ersteSpalteSortiert = input.getErsteSpalteSortiert();
 		zweiteSpalteSortiert = input.getZweiteSpalteSortiert();
 	}
 
-	private Integer getGesamtenAbstand(List<Integer> ersteSpalteSortiert, List<Integer> zweiteSpalteSortiert)
+	public Integer getGesamtenAbstand()
 	{
 		Integer gesamterAbstand = 0;
 		for(int i = 0; i < ersteSpalteSortiert.size(); i++)

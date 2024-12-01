@@ -16,9 +16,8 @@ public class DateiLeser {
 		this.zweiteSpalte = new ArrayList<>();
 		liesDatei(pfad);
 	}
-	private void liesDatei(String pfad) throws IOException
+	private void liesDatei(String datei) throws IOException
 	{
-		File datei = new File(pfad);
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(datei));
 		wandleSpaltenZuZweiListen(bufferedReader, "\t");
 	}
