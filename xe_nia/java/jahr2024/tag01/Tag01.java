@@ -14,8 +14,8 @@ public class Tag01
 	{
 		DateiLeser input = new DateiLeser(pfad);
 		input.wandleSpaltenZuZweiListen("   ");
-		ersteSpalteSortiert = input.getErsteSpalteSortiertNachZahlenwert();
-		zweiteSpalteSortiert = input.getZweiteSpalteSortiertNachZahlenwert();
+		this.ersteSpalteSortiert = input.getErsteSpalteSortiertNachZahlenwert();
+		this.zweiteSpalteSortiert = input.getZweiteSpalteSortiertNachZahlenwert();
 	}
 
 	public Integer getGesamtenAbstand()
