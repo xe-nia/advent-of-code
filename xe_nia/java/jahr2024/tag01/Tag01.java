@@ -3,18 +3,19 @@ package jahr2024.tag01;
 import jahr2024.alle_tage.DateiLeser;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
-public class Aufgabe01_1
+public class Tag01
 {
 	private final List<Integer> ersteSpalteSortiert;
 	private final List<Integer> zweiteSpalteSortiert;
-	public Aufgabe01_1(String pfad) throws IOException
+	public Tag01(String pfad) throws IOException
 	{
 		DateiLeser input = new DateiLeser(pfad);
 		input.wandleSpaltenZuZweiListen("   ");
-		ersteSpalteSortiert = input.getErsteSpalteSortiert();
-		zweiteSpalteSortiert = input.getZweiteSpalteSortiert();
+		ersteSpalteSortiert = input.getErsteSpalteSortiertNachZahlenwert();
+		zweiteSpalteSortiert = input.getZweiteSpalteSortiertNachZahlenwert();
 	}
 
 	public Integer getGesamtenAbstand()
@@ -26,5 +27,16 @@ public class Aufgabe01_1
 		}
 
 		return gesamterAbstand;
+	}
+
+	public Integer getAehnlichkeitsgrad()
+	{
+		Integer aehnlichkeitsgrad = 0;
+		for(Integer zahl : ersteSpalteSortiert)
+		{
+			aehnlichkeitsgrad += Collections.frequency(zweiteSpalteSortiert, zahl) * zahl;
+		}
+
+		return aehnlichkeitsgrad;
 	}
 }

@@ -50,17 +50,17 @@ public class DateiLeser {
 		return spalte.stream().map(Integer::parseInt).collect(Collectors.toList());
 	}
 
-	public List<Integer> getErsteSpalteSortiert()
+	public List<Integer> getErsteSpalteSortiertNachZahlenwert()
 	{
-		return getSpalteSortiert(ersteSpalte);
+		return getSpalteSortiertNachZahlenwert(ersteSpalte);
 	}
 
-	public List<Integer> getZweiteSpalteSortiert()
+	public List<Integer> getZweiteSpalteSortiertNachZahlenwert()
 	{
-		return getSpalteSortiert(zweiteSpalte);
+		return getSpalteSortiertNachZahlenwert(zweiteSpalte);
 	}
 
-	private List<Integer> getSpalteSortiert(ArrayList<String> spalte)
+	private List<Integer> getSpalteSortiertNachZahlenwert(ArrayList<String> spalte)
 	{
 		return spalte.stream().map(Integer::parseInt).sorted().collect(Collectors.toList());
 	}
