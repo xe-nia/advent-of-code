@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class DateiLeser {
 
+	private BufferedReader bufferedReader;
 	private ArrayList<String> ersteSpalte;
 	private ArrayList<String> zweiteSpalte;
 
@@ -18,11 +19,10 @@ public class DateiLeser {
 	}
 	private void liesDatei(String datei) throws IOException
 	{
-		BufferedReader bufferedReader = new BufferedReader(new FileReader(datei));
-		wandleSpaltenZuZweiListen(bufferedReader, "   ");
+		bufferedReader = new BufferedReader(new FileReader(datei));
 	}
 
-	public void wandleSpaltenZuZweiListen(BufferedReader bufferedReader, String trenner) throws IOException
+	public void wandleSpaltenZuZweiListen(String trenner) throws IOException
 	{
 		String[] getrennteZeile;
 
