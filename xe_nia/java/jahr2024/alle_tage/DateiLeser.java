@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 public class DateiLeser {
 
 	private BufferedReader bufferedReader;
-	private ArrayList<String> ersteSpalte;
-	private ArrayList<String> zweiteSpalte;
+	private final ArrayList<String> ersteSpalte;
+	private final ArrayList<String> zweiteSpalte;
 
 	public DateiLeser(String pfad) throws IOException
 	{
-		this.ersteSpalte = new ArrayList<>();
-		this.zweiteSpalte = new ArrayList<>();
+		ersteSpalte = new ArrayList<>();
+		zweiteSpalte = new ArrayList<>();
 		liesDatei(pfad);
 	}
 	private void liesDatei(String datei) throws IOException

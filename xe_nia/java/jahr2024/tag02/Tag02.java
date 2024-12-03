@@ -12,7 +12,7 @@ public class Tag02
 	public Tag02(String pfad) throws IOException
 	{
 		DateiLeser input = new DateiLeser(pfad);
-		this.reports = input.getZeilen(" ");
+		reports = input.getZeilen(" ");
 	}
 
 	public Integer getAnzahlSichererReports()
