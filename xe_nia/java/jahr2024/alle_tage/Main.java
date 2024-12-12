@@ -20,5 +20,7 @@ public class Main {
 		System.out.println("Tag 2, Aufgabe 1: " + tag02.getAnzahlSichererReports());
 		System.out.println("Tag 2, Aufgabe 2: " + tag02.getAnzahlSichererReportsMitDaempfung());
 		System.out.println("-----------------------------------------------");
+
+		//Teständerung
 	}
 }
