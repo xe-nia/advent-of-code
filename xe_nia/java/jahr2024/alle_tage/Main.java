@@ -2,6 +2,7 @@ package jahr2024.alle_tage;
 
 import jahr2024.tag01.Tag01;
 import jahr2024.tag02.Tag02;
+import jahr2024.tag11.Tag11;
 
 import java.io.IOException;
 
@@ -21,6 +22,10 @@ public class Main {
 		System.out.println("Tag 2, Aufgabe 2: " + tag02.getAnzahlSichererReportsMitDaempfung());
 		System.out.println("-----------------------------------------------");
 
-		//Teständerung
+		//Tag 11:
+		Tag11 tag11 = new Tag11();
+		tag11.blink25Times();
+		System.out.println("Tag 11, Aufgabe 1: " + tag11.countStonesAfter25Blinks());
+
 	}
 }
